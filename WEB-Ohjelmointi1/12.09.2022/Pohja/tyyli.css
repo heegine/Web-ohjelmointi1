@@ -1,0 +1,7 @@
+/*CSS = cascading style sheet
+kaikki on pelkkää CSS:sää
+eli ei tehdä lohkoja*/
+p{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: smaller;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Luokat ja id</title>
+    <style>
+        p{
+            background-color: aquamarine;
+        }
+
+
+        /*Katsotaan tässä mikä idea on luokkamäärittelyllä tyylien näkökulmasta*/
+        
+        
+
+        /*luokkamäärittely .:llä*/
+        .yellowish{
+            color:tomato
+        }
+        
+
+        /*id-määrittely #:llä*/
+        #secondHeader{
+            background-color: black;
+            font-style: oblique;
+        }
+        
+
+        /*miten voidaan luokkamäärittely ja elementit yhdistää?*/
+        /*elementti.luokka{....}*/
+        p.yellowish{
+            border: 10px ridge red;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <nav><a href = "secondHeader"> To The second section</a>
+        <a href = "http://moodle.savonia.fi">Savonian moodleen</a>
+    </nav>
+    <section>
+        <h1>First level header</h1>
+        <p class = "yellowish">First level headers paragraph</p>
+        <p class = "yellowish">ID example</p>
+        <p>New paragraph</p>
+    </section>
+    <section>
+        <h2 class = "yellowish" id = "secondHeader">This is a header</h2>
+        <p >Apply classess here</p>
+    </section>
+</body>
+
+</html>

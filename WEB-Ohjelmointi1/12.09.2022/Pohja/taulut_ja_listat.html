@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Listat ja taulut</title>
+    <style>
+
+        
+        /*Lisätään taulukolle tyylejä tähän*/
+       ul{
+        list-style-type:square;
+        list-style-position: outside;
+        /*voidaan yliajaa merkki kuvalla*/
+        list-style-image: url("h.png");
+       }
+
+       ol{
+        list-style-type: upper-roman;
+       }
+        /*poistetaan "tyhjä ilma" väleistä*/
+        table,th,td {
+            border: 2px solid black;
+        }
+            table{
+                border-collapse: collapse;
+            }
+        </style>
+</head>
+<body>
+    <h1>Listat</h1>
+    <p>Unordered list</p>
+        <ul>
+            <li>Eka</li><!--list item-->
+            <li>Toka</li>
+            <li>Kolmas</li>
+            <li>asldkjasldkadlkasjdlaskdjaskldjaslkdjaskldjasdklasjdlkasjdasjdkljaskdjaskldjal</li>
+        </ul>
+    
+    <p>Ordered list</p>
+        <ol start = "7" reversed>
+            <li>Eka</li><!--list item-->
+            <li>Toka</li>
+            <li>Kolmas</oli>
+        </ol>
+    
+    <p>Description list</p>
+     <dt>Mäkki</dt><!--description term-->
+     <dd>Kuumenee sormien alla</dd><!--description description-->
+     <dt><a href = "Testi">PC</a></dt>
+     <dd>suurin osa koneista</dd>
+     <dd>voi olla vakaa</dd>
+    <h1>Taulu</h1>
+    <table>
+        <tr>
+            <th>Eka</th><!--table header-->
+            <th>Toka</th>
+            <th >Kolmas</th>
+
+        </tr><!--table row-->
+        <tr>
+            <td>11</td><!--table data-->
+            <td>12</td>
+            <td rowspan="2">13</td><!--rowspan kasvattaa riviltä toiselle-->
+        </tr>
+        <tr>
+            <td>21</td><!--table data-->
+            <td>22</td>
+            <!--jäi 13 alle-->
+        </tr>
+        <tr>
+            <td>31</td><!--table data-->
+            <td>32</td>
+            <td>33</td>
+        </tr>
+    </table>
+    
+    
+
+    
+    
+</body>
+</html>

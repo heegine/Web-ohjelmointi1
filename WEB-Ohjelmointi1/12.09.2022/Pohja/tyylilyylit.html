@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--external style:-->
+    <link rel="stylesheet" href="tyyli.css">
+
+    <title>Tyylitestit</title>
+    <!--Internal style:-->
+    <style>
+        /*Täällä on css:ssää. Tämä on kommentti*/
+        /*perussyntaksi 
+         valitsin {
+             ominaisuus: arvo;
+             ominaisuus2: arvo;
+         }
+         */
+        p,
+        h2 {
+            background-color: aqua;
+            text-align: right;
+            font-size: xx-large;
+        }
+
+        h1 {
+            background-color: hotpink;
+            text-align: center;
+            height: 500px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-stretch: ultra-expanded;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Ensimmäisen tason otsikko</h1>
+    <!--inline style-->
+    <p style="color:beige">Muutetaan tämän tyyliä</p>
+    <h2>Toisen tason otsikko</h2>
+    <!--kokeillaan span, b, strong ja em -elementin käyttöä p-elementin:n sisällä-->
+    <p>Muokataan <b>tämän</b> <em tyylejä></em> <i tavoilla></i></p>
+    <p> testataan <span style="border: 10px solid green;"> span </span>-elemtnttiä</p>
+    <!-- span perii vanhemman tyylin muodot mutta sille voi välittää omia tyylejä-->
+    <!--Eri tapoja tehdä rivitystyä-->
+    <p>
+        tässäEi
+        Tule
+        eri
+        Rivejä
+    </p>
+    <p>Tämä <br>on <br>eri <br> riveillä</p>
+    <pre>
+    Tämä
+        on
+           hämy
+                elementti
+   </pre>
+
+
+    <a href="https://www.w3schools.com/css/css_text.asp">Tekstiin liittyviä muotoiluja löytyy täältä</a>
+</body>
+
+</html>
