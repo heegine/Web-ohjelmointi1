@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title>Form esimerkki</title>
+    <style>
+        input, select{
+                margin: 10px;
+                padding: 5px;
+        }
+        /*attribute selector eli tehdään tyylimuutoksia attribuutin mukaan*/
+        input[type=text],input[type=password]{
+                width: 95%;
+                box-sizing: border-box;
+        }
+        input[type=text]{
+            background-image: url(jou.png);
+            background-repeat: no-repeat;
+            padding-left: 20px;
+            background-size: contain;
+            background-color: #97928b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Forms esimerkki</h1>
+    <p>Lomaketta käytetään tiedon välittämiseen palvelimelle</p>
+    <form action="http://animalhospital.freemyip.com/test.php" method="get" target="_blank">
+
+        <!--Oletusmetodi on get, jotta lomakkeen tiedot eivät näkyisi osoiterivillä, voi käyttää post-metodia.
+            target="_blank" määritteellä avautuu uuteen ikkunaan-->
+        <fieldset>
+            <legend>Perustiedot</legend>
+            <label for="etunimi">Etunimi</label>
+            <input type="text" id="etunimi" name="etunimi" value="Jonne" required><br>
+            <label for="salasana">Salasana</label>
+            <input type="password" id="salasana" name="hyshys"><br>
+
+            <!--drop-down list eli alasvetovalikko-->
+            <label for="dropDown">Tee valintasi</label>
+
+            <select name="alasvetovalikko" id="dropDown">
+                <option>Valinta 1</option>
+                <option value="opt2">Valinta 2</option>
+                <option value="opt3" selected>Valinta 3</option>
+            </select><br>
+
+
+            <!-- Valintalaatikot eli täpät:-->
+            <input type="checkbox" id="chb1" name="valintaboksi1">
+            <label for="chb1">Valitse tämä</label><br>
+            <input type="checkbox" id="chb2" name="valintaboksi2" value="valittu" checked>
+            <label for="chb2">Valitse toinen</label><br>
+        </fieldset>
+        <!--Radiobuttonit:-->
+        <fieldset>
+            <legend>Valitse tietokone</legend>
+            <input type="radio" id="pikachu" name="pokemon" value="Pikachu" checked>
+            <label for="pikachu">Pikachu</label><br>
+            <input type="radio" id="squirtle" name="pokemon" value="Squirtle">
+            <label for="squirtle">Squirtle</label><br>
+            <input type="radio" id="teppo" name="pokemon" value="teppo">
+            <label for="teppo">Teppo</label>
+
+
+        </fieldset>
+
+
+        <!--Tyypillisimmät input elementin attribuutit
+            checked	- Oletusarvo esim. checkboxeilla
+            disabled - indikoi kenttää, jota ei voi täyttää
+            max/min - suurin ja pienin arvo
+            maxlength - merkkijonon suurin pituus
+            pattern	- regular expression tarkistus merkkijonoille
+            readonly - kenttää voi vain lukea
+            required - pakollinen kenttä
+            size - kentän koko
+            name - nimikenttä
+            value - (oletus)arvo kentälle
+            
+            Palvelimelle välittyy kentän tiedot name=value pareina
+         -->
+        <!--Date tyypillä saadaan päivämäärä-->
+        <label for="pvm">Anna pvm</label>
+        <input type="datetime-local" id="pvm" name="pvm"><br>
+        <!--Hidden tyyppinen ei näy käyttäjälle, mutta sillä voidaan viedä tietoa palvelimelle-->
+        <input type="hidden" name="piilotettua" value="tietoa">
+        <!--Tiedoston tuominen, lisätietoa https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file-->
+        <input type="submit" value="Lähetä">
+        <input type="reset" value="Tyhjää">
+        <!-- Mutta miten saa korvattua kuvalla? Ehkä jokin input tyyppi voi hoitaa sen...-->
+    </form>
+</body>
+
+</html>
