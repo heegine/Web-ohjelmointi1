@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>template area esimerkki</title>
+    <style>
+        .item-a {
+            /*tähän määritys*/
+            background-color:lime;
+            grid-area: header;
+        }
+
+        .item-b {
+            /*tähän määritys*/
+            grid-area: main;
+            background-color:lightskyblue;
+        }
+
+        .item-c {
+            /*tähän määritys*/
+            grid-area: sidebar;
+            background-color:lightcoral;
+        }
+
+        .item-d {
+            /*tähän määritys*/
+            grid-area: footer;
+            background-color:pink;
+        }
+
+        .wrapper {
+            display: grid;
+            grid-template-columns: repeat(4,50px);
+            grid-template-rows: 50px auto 50px;
+            /*Tähän määritetään template-areas wrapperin elementeille*/
+            grid-template-areas:
+            "header header header header"
+            "main main . sidebar"
+            "footer footer footer footer";
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="item-a">item-a</div>
+        <div class="item-b">item-b</div>
+        <div class="item-c">item-c</div>
+        <div class="item-d">item-d</div>       
+    </div>
+</body>
+
+</html>

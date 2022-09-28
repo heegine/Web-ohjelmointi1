@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Grid-tutorial-esim1</title>
+  <style>
+    .wrapper {
+      display: grid;
+      grid-template-rows: 2fr 5fr 1fr 1fr;
+      /*fractions*/
+      grid-template-columns: 1fr 2fr 1fr;/*repeat(4, 1fr);*/
+      /*vrt edelliseen*/
+      grid-gap: 2%;
+    }
+
+    .wrapper>div {
+      font-size: xx-large;
+      padding: .5em;
+      background: green;
+      text-align: center;
+    }
+
+    .wrapper>div:hover {
+      background: lightgreen;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+    <div>10</div>
+    <div>11</div>
+  </div>
+</body>
+
+</html>
